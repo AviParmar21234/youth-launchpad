@@ -55,7 +55,7 @@ Do not add rounded cards, gradients, or drop shadows elsewhere. Rows divided by 
 
 - `site/images/logo-full.png` — full lockup, transparent, for light backgrounds.
 - `site/images/logo-full-light.png` — white and gold version for the Forest footer.
-- `site/images/emblem.svg` — the bridge mark as vector art, traced from the logo by `tools/trace_emblem.py`. Use this everywhere the mark appears on screen (nav, hero, founder frame, watermarks); it is sharp at any size. Its parts carry ids (`deck`, `arch`, `road`, `fig-l`, `fig-c`, `fig-r`) so the hero can assemble it on load.
+- `site/images/emblem.svg` — the bridge mark as clean vector art, rebuilt from the logo by `tools/trace_emblem.py`: the deck and arch band are circular arcs fitted to the original, the legs form a ring concentric with the opening, the piers are rectangles, the heads are circles, the bodies are four corners joined by arcs, and only the road is a smoothed trace. Use this everywhere the mark appears on screen (nav, hero, founder frame, watermarks); it is sharp at any size. Its parts carry ids (`deck`, `arch`, `road`, `fig-l`, `fig-c`, `fig-r`) so the hero can assemble it on load.
 - `site/images/emblem.png` — raster fallback of the same mark, used only as the favicon source.
 - Minimum height for the emblem: 32px. Keep clear space of at least the height of the figures around it.
 - Do not recolor the gold or place the dark lockup on Forest.
