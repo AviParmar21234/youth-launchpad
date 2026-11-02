@@ -37,6 +37,12 @@ vercel deploy --prod --yes
 
 Preview deployments (`vercel deploy`) are protected by a Vercel login by default; use the production address when sharing with the client. When youthlaunchpad.org is ready, add it as a domain to the project in the Vercel dashboard.
 
+A review mirror also runs on GitHub Pages at https://aviparmar21234.github.io/youth-launchpad/ from the `gh-pages` branch of github.com/AviParmar21234/youth-launchpad. Refresh it after a rebuild with:
+
+```bash
+git subtree push --prefix site origin gh-pages
+```
+
 ## Editing content
 
 1. Edit the page body in `tools/pages/<page>.html`. Header, footer, and nav live once in `tools/layout.html`.
