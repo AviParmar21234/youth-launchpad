@@ -41,11 +41,13 @@ Type scale (CSS classes in `site/css/styles.css`): `.h1` 44–86px, `.h2` 32–5
 
 ## 3. The arch
 
-The one signature shape. It appears as:
-- the **hero bridge**: gold deck arc, green inner arch, piers, and the road, drawn once on page load;
+The one signature shape, taken straight from the logo. It appears as:
+- the **hero mark**: the real emblem, large, beside the headline, settling in once on page load;
 - **arch-topped panels** (`.arch`) for the three programs, `border-radius: 999px 999px 14px 14px`;
 - the **founder frame** (`.founder__mark`), ready to hold a headshot;
-- a faint **arc ornament** behind each inner page title.
+- a faint **emblem watermark** (`.page-head__mark`, 10% opacity) behind each inner page title.
+
+Never redraw or simplify the logo as line art; use the supplied emblem files.
 
 Do not add rounded cards, gradients, or drop shadows elsewhere. Rows divided by hairlines (`.ways`, `.places`, `.outline`) carry lists; arches carry the programs.
 
