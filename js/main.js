@@ -44,21 +44,8 @@
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
-  /* ---------- hero bridge ---------- */
-  var bridge = document.querySelector(".bridge");
-  if (bridge) {
-    bridge.querySelectorAll(".draw").forEach(function (p) {
-      var len = typeof p.getTotalLength === "function" ? p.getTotalLength() : 1000;
-      p.style.strokeDasharray = len;
-      p.style.strokeDashoffset = len;
-    });
-    requestAnimationFrame(function () {
-      document.body.classList.add("is-loaded");
-      bridge.classList.add("is-ready");
-    });
-  } else {
-    document.body.classList.add("is-loaded");
-  }
+  /* ---------- hero load sequence ---------- */
+  requestAnimationFrame(function () { document.body.classList.add("is-loaded"); });
 
   /* ---------- forms ---------- */
   var form = document.querySelector("form.inquiry");
