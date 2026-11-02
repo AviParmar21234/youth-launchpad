@@ -1,0 +1,7 @@
+# client brief stays out of the public repo
+source/
+websiteinfo.zip
+
+.vercel
+.DS_Store
+.claude/
