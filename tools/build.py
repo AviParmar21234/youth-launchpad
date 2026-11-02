@@ -20,6 +20,13 @@ SITE = ROOT.parent / "site"
 LAYOUT = (ROOT / "layout.html").read_text(encoding="utf-8")
 
 
+def inline_emblem(css_class: str) -> str:
+    """The traced emblem (site/images/emblem.svg) inlined so CSS can animate its parts."""
+    svg = (SITE / "images/emblem.svg").read_text(encoding="utf-8")
+    svg = svg.replace("<svg ", f'<svg class="{css_class}" ', 1)
+    return svg
+
+
 def build_page(src: Path) -> None:
     raw = src.read_text(encoding="utf-8")
     m = re.match(r"---\n(.*?)\n---\n(.*)", raw, re.S)
@@ -36,6 +43,7 @@ def build_page(src: Path) -> None:
     html = html.replace("{{description}}", meta["description"])
     html = html.replace("{{canonical}}", canonical)
     html = html.replace("{{slug}}", slug)
+    body = body.replace("{{emblem-svg}}", inline_emblem("emblem emblem--hero"))
     html = html.replace("{{body}}", body.rstrip("\n"))
     html = re.sub(
         r"\{\{active:([a-z-]+)\}\}",
